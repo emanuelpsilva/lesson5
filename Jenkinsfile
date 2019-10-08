@@ -9,7 +9,7 @@ node('master') {
             sh 'python test_functions.py'
         }
         stage("Deployment") {
-            if (env.BRANCH_NAME == 'master') {
+            if (env.BRANCH_NAME == 'multi-pipeline') {
                 printMessage('Deploying the master branch')
             } else {
                 printMessage("No deployment for branch [${env.BRANCH_NAME}]")
